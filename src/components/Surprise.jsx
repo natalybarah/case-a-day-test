@@ -5,17 +5,26 @@ import {useState, useEffect} from 'react'
 const Surprise=()=>{
 
     const [revealText, setRevealText] = useState(false)
+    const [revealText2, setRevealText2] = useState(false)
+
     useEffect(()=>{
-        setTimeout(()=>{
-            setRevealText(!revealText)
-        }, 3000)
+        const timer1 = setTimeout(() => {
+            setRevealText(true);
+            
+     
+            const timer2 = setTimeout(() => {
+                setRevealText2(true); 
+            }, 2000);
+
+        }, 4000);
+        return ()=> clearTimeout(timer1)
 
     }, [])
 
     return(
        <div className="h-dvh bg-black flex flex-col items-center justify-center p-6 font-mono">
          
-            <h1 className="text-[80px] text-green-500 font-bold animate-glitch mb-8">
+            <h1 className="text-[100px] text-green-500 font-bold animate-glitch mb-8">
                 NIN
             </h1>
 
@@ -24,13 +33,20 @@ const Surprise=()=>{
                     <p className="typing-effect uppercase tracking-widest">
                         [SUCCESS] Access Granted
                     </p>
-                    <p className="text-xl text-white font-bold">
-                        CITA CON NINE INCH NAILS: LUNES, 19 DE FEBRERO
-                    </p>
-                    <p className="text-sm text-green-700">
-                        Happy Valentine's Day
-                    </p>
+               {revealText2 && (
+                        <>
+                            <p className=" text-white font-bold text-xl">
+                                CITA CON NINE INCH NAILS: 
+                                <br/>
+                                LUNES, 16 DE FEBRERO
+                            </p>
+                            <p className="text-sm text-green-700 mt-4 ">
+                                Happy Valentine's Day
+                            </p>
+                        </>
+                    )}
                 </div>
+                
             )}
         </div>
     )
