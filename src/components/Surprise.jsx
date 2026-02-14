@@ -22,7 +22,7 @@ const Surprise=()=>{
     }, [])
 
     return(
-       <div className="h-dvh bg-black flex flex-col items-center justify-center p-6 font-mono">
+       <div className="h-dvh bg-black flex flex-col items-center justify-center p-[16px] font-mono">
          
             <h1 className="text-[100px] text-green-500 font-bold animate-glitch mb-8">
                 NIN
@@ -30,12 +30,12 @@ const Surprise=()=>{
 
             {revealText && (
                 <div className="text-green-400 space-y-4 text-center border-t border-green-900 pt-6">
-                    <p className="typing-effect uppercase tracking-widest">
-                        [SUCCESS] Access Granted
+                    <p className="typing-effect uppercase tracking-wide text-xs sm:text-sm">
+                        [SUCCESS] Access Granted to Centre Bell
                     </p>
                {revealText2 && (
                         <>
-                            <p className=" text-white font-bold text-xl">
+                            <p className=" text-white font-bold text-xl p-[16px]">
                                 CITA CON NINE INCH NAILS: 
                                 <br/>
                                 LUNES, 16 DE FEBRERO
