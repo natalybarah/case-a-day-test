@@ -9,6 +9,6 @@ export default defineConfig({
 
   ],
 
-  base: '/case-a-day-test'
+  base: '/case-a-day-test/'
 
 })
