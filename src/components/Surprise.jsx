@@ -38,6 +38,8 @@ const Surprise=()=>{
                             <p className=" text-white font-bold text-xl p-[16px]">
                                 CITA CON NINE INCH NAILS: 
                                 <br/>
+                                PEEL IT BACK TOUR - 2026
+                                <br/>
                                 LUNES, 16 DE FEBRERO
                             </p>
                             <p className="text-sm text-green-700 mt-4 ">
