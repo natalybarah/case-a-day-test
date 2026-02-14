@@ -2,18 +2,18 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { HashRouter, Routes, Route } from 'react-router';
 import Surprise from './components/Surprise.jsx';
 
 createRoot(document.getElementById('root')).render(
 
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path='/' element={<App/>}/>
       <Route path='surprise' element={<Surprise/>} />
     </Routes>
       
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
